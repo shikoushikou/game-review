@@ -3,7 +3,7 @@ import { v4 as uuid } from 'uuid';
 
 // ---- 类型（兼容旧组件接口） ----
 
-export type GameWithTags = GameItem & { tags: { id: string; name: string; slug: string }[] };
+export type GameWithTags = Omit<GameItem, 'tags'> & { tags: { id: string; name: string; slug: string }[] };
 export type Tag = TagItem;
 
 // ---- 查询 ----
